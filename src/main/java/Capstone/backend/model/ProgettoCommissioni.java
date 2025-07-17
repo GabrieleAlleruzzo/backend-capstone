@@ -23,8 +23,8 @@ public class ProgettoCommissioni {
     private String email;
     @Enumerated(EnumType.STRING)
     private TipoPorgettoCommissione tipoProg;
+    @Column(length = 10000)
     private String descrizione;
     private int budget;
-    // da cambiare in time stamp
     private Date data;
 }

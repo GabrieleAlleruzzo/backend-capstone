@@ -19,7 +19,7 @@ public class ProgettoPortfolio {
     private String nomeProgetto;
     private String imgCopertinaId;
     private String imgCopertina;
-    @Column(length = 1000)
+    @Column(length = 10000)
     private String descrizione;
     private String img1Id;
     private String img1;

@@ -17,7 +17,6 @@ public class ImageUploadService {
     @Autowired
     private Cloudinary cloudinary;
 
-    // metodo upload su coloudinary
     public HashMap<String, String> uploadImage(MultipartFile file) throws IOException {
         Map uploadResult = cloudinary.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
         String imageUrl = (String) uploadResult.get("url");

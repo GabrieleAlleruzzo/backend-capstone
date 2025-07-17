@@ -59,7 +59,7 @@ public class ProgettoPortfolioController {
         obj.put("imgString02Id", img02.get("public_id"));
         obj.put("imgString03Id", img03.get("public_id"));
 
-        //resittutisce un progettoPortfolio per effettuare la response entity
+
         return new ResponseEntity<>(PPService.saveProgettoPortfolio(progettoPortfolioDto, obj),HttpStatus.CREATED);
         }
 

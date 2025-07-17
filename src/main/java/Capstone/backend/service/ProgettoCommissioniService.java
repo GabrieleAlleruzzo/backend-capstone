@@ -27,7 +27,7 @@ public class ProgettoCommissioniService {
         postCommissione.setTipoProg(PCDto.getTipoProg());
         postCommissione.setDescrizione(PCDto.getDescrizione());
         postCommissione.setBudget(PCDto.getBudget());
-        postCommissione.setData(new Date(PCDto.getData()));
+        postCommissione.setData(PCDto.getData());
 
         progettoCommissioniRepository.save(postCommissione);
         return postCommissione;

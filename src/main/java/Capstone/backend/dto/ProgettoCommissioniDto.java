@@ -2,11 +2,14 @@ package Capstone.backend.dto;
 
 
 import Capstone.backend.enumeration.TipoPorgettoCommissione;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+
+import java.util.Date;
 
 @Data
 public class ProgettoCommissioniDto {
@@ -33,8 +36,9 @@ public class ProgettoCommissioniDto {
     @NotNull(message = "seleziona il tuo budget")
     private int budget;
 
-    @NotEmpty(message = "data?")
-    private String data;
+    @NotNull(message = "?")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", timezone = "UTC")
+    private Date data;
 
 
 }
