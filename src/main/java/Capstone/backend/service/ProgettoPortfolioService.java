@@ -46,7 +46,7 @@ public class ProgettoPortfolioService {
         newProgettoPortfolio.setImg2Id(obj.get("imgString02Id"));
         newProgettoPortfolio.setImg3(obj.get("imgString03"));
         newProgettoPortfolio.setImg3Id(obj.get("imgString03Id"));
-        newProgettoPortfolio.setData(new Date());
+        newProgettoPortfolio.setData(progettoPortfolioDto.getData());
         return progettoPortfolioRepository.save(newProgettoPortfolio);
     }
 
