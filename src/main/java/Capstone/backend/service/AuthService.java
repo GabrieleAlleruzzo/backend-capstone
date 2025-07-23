@@ -32,4 +32,12 @@ public class AuthService {
             throw new NotFoundException("Utente con questo username/password non trovato");
         }
     }
+
+    public Admin addAdmin (AdminDto adminDto){
+        Admin user = new Admin();
+        user.setName(adminDto.getName());
+        user.setPswd(passwordEncoder.encode(adminDto.getPswd()));
+
+        return adminRepository.save(user);
+    }
 }
