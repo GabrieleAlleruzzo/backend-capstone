@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "de76bcf3-720b-4c13-8d58-550bd193b703",
+		"name": "ProgettoPersonale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45732000"
+	},
+	"item": [
+		{
+			"name": "postPortfolio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA5NTcxNzAsImV4cCI6MTc1MDk1ODk3MCwic3ViIjoiNTIifQ.zSN3Cb5Il85RnsMu0KKgzCpqyyrRI3ERbBzoyDQDvQs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img_cover",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/zankle-cover.png"
+						},
+						{
+							"key": "img_01",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola.png"
+						},
+						{
+							"key": "img_02",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola1.png"
+						},
+						{
+							"key": "img_03",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola2.png"
+						},
+						{
+							"key": "data",
+							"value": "{\n  \"nomeProgetto\": \"Sviluppo Applicazione Mobile X\",\n  \"imgCopertina\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_cover.jpg\",\n  \"descrizione\": \"Un'applicazione mobile cross-platform per la gestione delle finanze personali, con dashboard interattiva e notifiche push.\",\n  \"img1\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot1.png\",\n  \"img2\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot2.png\",\n  \"img3\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot3.png\",\n  \"dataProgetto\": \"2024-06-15T10:30:00.000+00:00\"\n}",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/portfolio/upload-with-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"portfolio",
+						"upload-with-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putPortfolio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTIzMzg5NzcsImV4cCI6MTc1MjM0MDc3Nywic3ViIjoiMSJ9.D0y0CVOnuzZPkl4Mn3Rrm1CXAZX9ImZ9JFxRYlCrUd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA5NTcxNzAsImV4cCI6MTc1MDk1ODk3MCwic3ViIjoiNTIifQ.zSN3Cb5Il85RnsMu0KKgzCpqyyrRI3ERbBzoyDQDvQs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img_cover",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/zankle-cover.png"
+						},
+						{
+							"key": "img_01",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola.png"
+						},
+						{
+							"key": "img_02",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola1.png"
+						},
+						{
+							"key": "img_03",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola2.png"
+						},
+						{
+							"key": "data",
+							"value": "{\"id:\"52\",\n  \"nomeProgetto\": \"Sviluppo Applicazione Mobile X\",\n  \"imgCopertina\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_cover.jpg\",\n  \"descrizione\": \"Un'applicazione mobile cross-platform per la gestione delle finanze personali, con dashboard interattiva e notifiche push.\",\n  \"img1\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot1.png\",\n  \"img2\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot2.png\",\n  \"img3\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot3.png\",\n  \"dataProgetto\": \"2024-06-15T10:30:00.000+00:00\"\n}",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/portfolio/put",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"portfolio",
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCommission",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTIzMzg5NzcsImV4cCI6MTc1MjM0MDc3Nywic3ViIjoiMSJ9.D0y0CVOnuzZPkl4Mn3Rrm1CXAZX9ImZ9JFxRYlCrUd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA5NTcxNzAsImV4cCI6MTc1MDk1ODk3MCwic3ViIjoiNTIifQ.zSN3Cb5Il85RnsMu0KKgzCpqyyrRI3ERbBzoyDQDvQs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \r\n\"name\":\"Affio\",\r\n\r\n   \r\n \"surname\":\"Meff\",\r\n\r\n   \"tel\":\"3514585234\",\r\n\"email\":\"alfredopanebianco19@gmail.com\",\r\n\r\n \r\n     \"tipoProg\":\"logo_design\",\r\n\r\n  \r\n \"descrizione\":\"sono una descrizione\",\r\n\r\n\"budget\":10000,\r\n\r\n    \r\n \"data\":\"15/10/2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/commissioni/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"commissioni",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCommissionID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTIzMzg5NzcsImV4cCI6MTc1MjM0MDc3Nywic3ViIjoiMSJ9.D0y0CVOnuzZPkl4Mn3Rrm1CXAZX9ImZ9JFxRYlCrUd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA5NTcxNzAsImV4cCI6MTc1MDk1ODk3MCwic3ViIjoiNTIifQ.zSN3Cb5Il85RnsMu0KKgzCpqyyrRI3ERbBzoyDQDvQs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \r\n\"name\":\"Affio\",\r\n\r\n   \r\n \"surname\":\"Meff\",\r\n\r\n   \"tel\":\"3514585234\",\r\n\"email\":\"alfredopanebianco19@gmail.com\",\r\n\r\n \r\n     \"tipoProg\":\"logo_design\",\r\n\r\n  \r\n \"descrizione\":\"sono una descrizione\",\r\n\r\n\"budget\":10000,\r\n\r\n    \r\n \"data\":\"15/10/2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/commissioni/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"commissioni",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginRapido",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gabriele\",\r\n     \"pswd\":\"Mefff.2025\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postCommissioni",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA5NTcxNzAsImV4cCI6MTc1MDk1ODk3MCwic3ViIjoiNTIifQ.zSN3Cb5Il85RnsMu0KKgzCpqyyrRI3ERbBzoyDQDvQs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Giuseppe\",\r\n    \"surname\": \"Furnari\",\r\n    \"tel\": \"3492864488\",\r\n    \"email\": \"peppone@gmail.com\",\r\n    \"tipoProg\": \"logo_design\",\r\n    \"descrizione\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \\n It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\",\r\n    \"budget\": 350,\r\n    \"data\": \"02-05-2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/commissioni/addCommissione",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"commissioni",
+						"addCommissione"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delitePortfolio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTMwOTU4MDIsImV4cCI6MTc1MzA5NzYwMiwic3ViIjoiMSJ9.JosI9DQeI5dt2UiNzTwgUWanGG5_nMuiP7H67_ApUPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img_cover",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/zankle-cover.png",
+							"disabled": true
+						},
+						{
+							"key": "img_01",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola.png",
+							"disabled": true
+						},
+						{
+							"key": "img_02",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola1.png",
+							"disabled": true
+						},
+						{
+							"key": "img_03",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola2.png",
+							"disabled": true
+						},
+						{
+							"key": "data",
+							"value": "{\"id:\"52\",\n  \"nomeProgetto\": \"Sviluppo Applicazione Mobile X\",\n  \"imgCopertina\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_cover.jpg\",\n  \"descrizione\": \"Un'applicazione mobile cross-platform per la gestione delle finanze personali, con dashboard interattiva e notifiche push.\",\n  \"img1\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot1.png\",\n  \"img2\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot2.png\",\n  \"img3\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot3.png\",\n  \"dataProgetto\": \"2024-06-15T10:30:00.000+00:00\"\n}",
+							"contentType": "application/json",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/portfolio/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"portfolio",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Alfred\",\r\n    \"pswd\":\"Mefff.2026\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/addadmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"addadmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPortfolioAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTIzMzg5NzcsImV4cCI6MTc1MjM0MDc3Nywic3ViIjoiMSJ9.D0y0CVOnuzZPkl4Mn3Rrm1CXAZX9ImZ9JFxRYlCrUd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA5NTcxNzAsImV4cCI6MTc1MDk1ODk3MCwic3ViIjoiNTIifQ.zSN3Cb5Il85RnsMu0KKgzCpqyyrRI3ERbBzoyDQDvQs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img_cover",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/zankle-cover.png"
+						},
+						{
+							"key": "img_01",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola.png"
+						},
+						{
+							"key": "img_02",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola1.png"
+						},
+						{
+							"key": "img_03",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola2.png"
+						},
+						{
+							"key": "data",
+							"value": "{\"id:\"52\",\n  \"nomeProgetto\": \"Sviluppo Applicazione Mobile X\",\n  \"imgCopertina\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_cover.jpg\",\n  \"descrizione\": \"Un'applicazione mobile cross-platform per la gestione delle finanze personali, con dashboard interattiva e notifiche push.\",\n  \"img1\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot1.png\",\n  \"img2\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot2.png\",\n  \"img3\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot3.png\",\n  \"dataProgetto\": \"2024-06-15T10:30:00.000+00:00\"\n}",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/portfolio/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"portfolio",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPortfolioID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTIzMzg5NzcsImV4cCI6MTc1MjM0MDc3Nywic3ViIjoiMSJ9.D0y0CVOnuzZPkl4Mn3Rrm1CXAZX9ImZ9JFxRYlCrUd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTA5NTcxNzAsImV4cCI6MTc1MDk1ODk3MCwic3ViIjoiNTIifQ.zSN3Cb5Il85RnsMu0KKgzCpqyyrRI3ERbBzoyDQDvQs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img_cover",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/zankle-cover.png"
+						},
+						{
+							"key": "img_01",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola.png"
+						},
+						{
+							"key": "img_02",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola1.png"
+						},
+						{
+							"key": "img_03",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/D:/Epicode/Backend/Progetto personale/Frontend/frontend progetto personale/src/assets/images/tavola2.png"
+						},
+						{
+							"key": "data",
+							"value": "{\"id:\"52\",\n  \"nomeProgetto\": \"Sviluppo Applicazione Mobile X\",\n  \"imgCopertina\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_cover.jpg\",\n  \"descrizione\": \"Un'applicazione mobile cross-platform per la gestione delle finanze personali, con dashboard interattiva e notifiche push.\",\n  \"img1\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot1.png\",\n  \"img2\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot2.png\",\n  \"img3\": \"https://res.cloudinary.com/il-tuo-cloud/image/upload/v12345/app_mobile_screenshot3.png\",\n  \"dataProgetto\": \"2024-06-15T10:30:00.000+00:00\"\n}",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/portfolio/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"portfolio",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
