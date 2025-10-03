@@ -13,7 +13,9 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("*")  // Permetti tutti gli IP/origini
+                        // "*" Permetti tutti gli IP/origini
+                        // Ho impostato il mio URL
+                        .allowedOrigins("https://gabrielealleruzzocapstone.vercel.app/")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*");
             }
