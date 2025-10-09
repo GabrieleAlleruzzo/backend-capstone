@@ -1,5 +1,6 @@
 package Capstone.backend.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -14,6 +15,7 @@ public class ProgettoPortfolioDto {
     private String img1;
     private String img2;
     private String img3;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     private Date data;
 
 }
