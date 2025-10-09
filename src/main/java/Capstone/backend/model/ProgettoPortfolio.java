@@ -28,6 +28,6 @@ public class ProgettoPortfolio {
     private String img2;
     private String img3Id;
     private String img3;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX", timezone = "UTC")
     private Date data;
 }
