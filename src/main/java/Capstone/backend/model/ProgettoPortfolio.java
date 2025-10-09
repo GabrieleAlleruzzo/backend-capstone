@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.OffsetDateTime;
 import java.util.Date;
 
 @Table(name="ProgettoPortfolio")
@@ -28,6 +29,5 @@ public class ProgettoPortfolio {
     private String img2;
     private String img3Id;
     private String img3;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX", timezone = "UTC")
-    private Date data;
+    private OffsetDateTime data;
 }
